@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flappyBird</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #bird {
+            width: 100px;
+            height: 100px;
+            background: black;
+            position: absolute;
+            left: calc(50% - 50px)
+        }
+
+        body {
+            overflow: hidden
+        }
+    </style>
+</head>
+<body>
+<div id="bird">
+
+</div>
+</body>
+<script type="text/javascript">
+    var timer = null;
+    var isSpeedY = 0;
+    var t = timer = setInterval(function (){
+        isSpeedY ++;
+        var t = isSpeedY + bird.offsetTop;
+        bird.style.top = t + 'px';
+        },30);
+
+    onkeydown = function () {
+        isSpeedY -= 30;
+    }
+</script>
+</html>
